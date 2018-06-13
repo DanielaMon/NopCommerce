@@ -1,0 +1,18 @@
+﻿@model Nop.Plugin.Widgets.ProductMessage.Models.PublicInfoModel
+@{
+    Layout = "";
+
+    Html.AddCssFileParts("~/Plugins/Widgets.ProductMessage/Content/productMessage/product-message.css");
+    Html.AppendCssFileParts("~/lib/fontAwesome/css/font-awesome-4.6.3.min.css");
+}
+
+@{
+    var messageText = Model.MessageText;
+    if (!string.IsNullOrEmpty(messageText))
+    {
+        <div id="product-message" class="productMessage">
+            <i class="fa fa-info-circle"></i>
+            @messageText
+        </div>
+    }
+}

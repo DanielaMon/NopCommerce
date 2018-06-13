@@ -1,0 +1,11 @@
+﻿@model ProductDetailsModel
+
+@if (!String.IsNullOrWhiteSpace(Model.Author))
+{
+<div class="additional-details">
+    <div class="author">
+        <span class="label">@T("Products.Author"):</span>
+        <span class="value">@Model.Author</span>
+    </div>
+</div>
+}
